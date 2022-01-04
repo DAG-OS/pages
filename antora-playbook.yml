@@ -9,6 +9,10 @@ content:
       branches: [trunk, v*]
       start_paths:
         - docs/antora
+    - url: https://github.com/DAG-OS/ansible-role-miniconda
+      branches: [trunk, v*]
+      start_paths:
+        - docs/antora
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
