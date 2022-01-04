@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://dag-os.github.io/pages/dagos.git/trunk/index.html</loc>
-<lastmod>2022-01-04T18:00:09.505Z</lastmod>
-</url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>https://dag-os.github.io/pages/sitemap-dagos.git.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://dag-os.github.io/pages/sitemap-dagos.miniconda.xml</loc>
+</sitemap>
+</sitemapindex>
