@@ -3,6 +3,12 @@ name: Publish to GitHub Pages
 on:
   push:
     branches: [trunk]
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Source of event'
+        required: false
+        default: 'No source specified'
 
 jobs:
   build:
