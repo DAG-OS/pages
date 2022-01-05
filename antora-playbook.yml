@@ -2,9 +2,11 @@
 site:
   title: DAG-OS Documentation
   url: https://dag-os.github.io/pages
-  start_page: dagos.git::index.adoc
+  start_page: contribution::CONTRIBUTING.adoc
 content:
   sources:
+    - url: https://github.com/DAG-OS/contribution-guide
+      branches: [trunk]
     - url: https://github.com/DAG-OS/ansible-role-git
       branches: [trunk, v*]
       start_paths:
