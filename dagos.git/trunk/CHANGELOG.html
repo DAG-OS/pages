@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Changelog :: DAG-OS Documentation</title>
+    <link rel="canonical" href="https://dag-os.github.io/pages/dagos.git/trunk/CHANGELOG.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://dag-os.github.io/pages">DAG-OS Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="dagos.git" data-version="trunk">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Ansible role: dagos.git</span>
+    <span class="version">trunk</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="index.html">Ansible role: dagos.git</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">trunk</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dagos.miniconda/trunk/index.html">Ansible role: dagos.miniconda</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dagos.miniconda/trunk/index.html">trunk</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../dagos.tinytex/trunk/index.html">Ansible role: dagos.tinytex</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dagos.tinytex/trunk/index.html">trunk</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../contribution/CONTRIBUTING.html">Contribution Guide</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../contribution/CONTRIBUTING.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../contribution/CONTRIBUTING.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/DAG-OS/ansible-role-git/edit/trunk/docs/antora/modules/ROOT/pages/CHANGELOG.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Changelog</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>All notable changes to this project will be documented in this file.</p>
+</div>
+<div class="paragraph">
+<p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_unreleased"><a class="anchor" href="#_unreleased"></a>Unreleased</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section tracks upcoming changes that are not yet released.</p>
+</div>
+<div class="sect2">
+<h3 id="_added"><a class="anchor" href="#_added"></a>Added</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Ansible role for installing and configuring Git.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Install <code>git</code> and <code>git-lfs</code>.</p>
+</li>
+<li>
+<p>Configure some default Git configuration values.</p>
+</li>
+<li>
+<p>Allow providing additional configuration values.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Role testing via <a href="https://molecule.readthedocs.io/en/latest/">Molecule</a>.</p>
+</li>
+<li>
+<p>GitHub issue templates.</p>
+</li>
+<li>
+<p>Contribution guide.</p>
+</li>
+<li>
+<p>Antora based documentation.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changed"><a class="anchor" href="#_changed"></a>Changed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference a common contribution guide.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fixed"><a class="anchor" href="#_fixed"></a>Fixed</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Update apt cache before installing packages on Debian based systems.</p>
+</li>
+<li>
+<p>Allow usage as non-root user which is a major use case.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
