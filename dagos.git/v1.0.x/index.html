@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Ansible role: dagos.tinytex :: DAG-OS Documentation</title>
-    <link rel="canonical" href="https://dag-os.github.io/pages/dagos.tinytex/trunk/index.html">
+    <title>Ansible role: dagos.git :: DAG-OS Documentation</title>
+    <link rel="canonical" href="https://dag-os.github.io/pages/dagos.git/trunk/index.html">
     <meta name="generator" content="Antora 3.0.0">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -49,12 +49,12 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="dagos.tinytex" data-version="trunk">
+<div class="nav-container" data-component="dagos.git" data-version="v1.0.x">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Ansible role: dagos.tinytex</a></h3>
+    <h3 class="title"><a href="index.html">Ansible role: dagos.git</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -71,18 +71,18 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Ansible role: dagos.tinytex</span>
-    <span class="version">trunk</span>
+    <span class="title">Ansible role: dagos.git</span>
+    <span class="version">v1.0.x</span>
   </div>
   <ul class="components">
-    <li class="component">
-      <a class="title" href="../../dagos.git/trunk/index.html">Ansible role: dagos.git</a>
+    <li class="component is-current">
+      <a class="title" href="../trunk/index.html">Ansible role: dagos.git</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../dagos.git/trunk/index.html">trunk</a>
+          <a href="../trunk/index.html">trunk</a>
         </li>
-        <li class="version">
-          <a href="../../dagos.git/v1.0.x/index.html">v1.0.x</a>
+        <li class="version is-current">
+          <a href="index.html">v1.0.x</a>
         </li>
       </ul>
     </li>
@@ -94,11 +94,11 @@
         </li>
       </ul>
     </li>
-    <li class="component is-current">
-      <a class="title" href="index.html">Ansible role: dagos.tinytex</a>
+    <li class="component">
+      <a class="title" href="../../dagos.tinytex/trunk/index.html">Ansible role: dagos.tinytex</a>
       <ul class="versions">
-        <li class="version is-current is-latest">
-          <a href="index.html">trunk</a>
+        <li class="version is-latest">
+          <a href="../../dagos.tinytex/trunk/index.html">trunk</a>
         </li>
       </ul>
     </li>
@@ -121,22 +121,29 @@
   <a href="../../contribution/CONTRIBUTING.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Ansible role: dagos.tinytex</a></li>
+    <li><a href="index.html">Ansible role: dagos.git</a></li>
     <li><a href="index.html">README</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/DAG-OS/ansible-role-tinytex/edit/trunk/docs/antora/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">v1.0.x</button>
+  <div class="version-menu">
+    <a class="version" href="../trunk/index.html">trunk</a>
+    <a class="version is-current" href="index.html">v1.0.x</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/DAG-OS/ansible-role-git/edit/v1.0.x/docs/antora/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Ansible role: dagos.tinytex</h1>
+<h1 class="page">Ansible role: dagos.git</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>A role for installing <a href="https://yihui.org/tinytex/">TinyTeX</a> in a multi-user setup.</p>
+<p>A role for installing and configuring <a href="https://git-scm.com">Git</a>.</p>
 </div>
 </div>
 </div>
@@ -144,7 +151,7 @@
 <h2 id="_requirements"><a class="anchor" href="#_requirements"></a>Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Root privileges are required for a successful installation.</p>
+<p>None.</p>
 </div>
 </div>
 </div>
@@ -155,19 +162,36 @@
 <p>The following variables are overridable by users to configure this role:</p>
 </div>
 <div class="listingblock">
-<div class="title"><a href="https://github.com/DAG-OS/ansible-role-tinytex/blob/trunk/defaults/main.yml">defaults/main.yml</a></div>
+<div class="title"><a href="https://github.com/DAG-OS/ansible-role-git/blob/trunk/defaults/main.yml">defaults/main.yml</a></div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
-# By default ensure that TinyTeX is present.
-# Allowed values: present, install
+# By default we ensure that git is present and configured.
+# Allowed values: present, install, configure
 state: present
 
-# Where to install tinytex to?
-install_dir: /opt/tinytex
-
-# Which packages to install with tlmgr after installing tinytex?
-packages: []</code></pre>
+# The settings provided via this variable are applied to the global git config.
+# They are combined with the default_git_settings variable.
+git_settings: {}</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>The default Git configuration values are as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title"><a href="https://github.com/DAG-OS/ansible-role-git/blob/trunk/vars/main.yml">vars/main.yml</a></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
+# The following settings provide some sensible defaults to apply globally.
+# Override or append to them via the 'git_settings' variable.
+default_git_settings:
+  core.autocrlf: "false"
+  core.editor: vim
+  core.longpaths: "true"
+  pull.ff: only</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the official <a href="https://git-scm.com/docs/git-config#_variables">Git documentation</a> for a list of available configuration values.</p>
 </div>
 </div>
 </div>
@@ -186,32 +210,27 @@ packages: []</code></pre>
 <p>The following playbook is tested regularly as part of the defined CI pipeline:</p>
 </div>
 <div class="listingblock">
-<div class="title"><a href="https://github.com/DAG-OS/ansible-role-tinytex/blob/trunk/molecule/default/converge.yml">molecule/default/converge.yml</a></div>
+<div class="title"><a href="https://github.com/DAG-OS/ansible-role-git/blob/trunk/molecule/default/converge.yml">molecule/default/converge.yml</a></div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
 - name: Converge
   hosts: all
   pre_tasks:
-    - name: Update apt cache.
-      apt: update_cache=true cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-    - name: Install dependencies
-      ansible.builtin.package:
-        name:
-          - wget
-          - perl
+    - name: Create a test user
+      ansible.builtin.user:
+        name: test
         state: present
+        create_home: true
   roles:
-    - role: dagos.tinytex
+    - role: dagos.git
+      become: true
+      become_user: test
       vars:
         state: present
-        packages:
-          - adjustbox
-    - role: dagos.tinytex
-      vars:
-        state: latest
-        packages:
-          - zref</code></pre>
+        git_settings:
+          user.name: Max Mustermann
+          user.email: max.mustermann@gmx.de
+          pull.ff: "false"</code></pre>
 </div>
 </div>
 </div>
@@ -228,7 +247,7 @@ packages: []</code></pre>
 <h2 id="_author_information"><a class="anchor" href="#_author_information"></a>Author information</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This role was created in 2021 by Lucas Resch.</p>
+<p>This role was created in 2022 by <a href="https://github.com/MLNW">Lucas Resch</a>.</p>
 </div>
 </div>
 </div>
