@@ -12,4 +12,7 @@
 <sitemap>
 <loc>https://dag-os.github.io/pages/sitemap-dagos.tinytex.xml</loc>
 </sitemap>
+<sitemap>
+<loc>https://dag-os.github.io/pages/sitemap-dagos.wsl_conf.xml</loc>
+</sitemap>
 </sitemapindex>
