@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contribution guide :: DAG-OS Documentation</title>
+    <link rel="canonical" href="https://dag-os.github.io/pages/contribution/CONTRIBUTING.html">
+    <meta name="generator" content="Antora 3.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <script>var uiRootPath = '../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://dag-os.github.io/pages">DAG-OS Documentation</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="contribution" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-explore is-active" data-panel="explore">
+  <div class="context">
+    <span class="title">Contribution Guide</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../dagos.git/trunk/index.html">Ansible role: dagos.git</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dagos.git/trunk/index.html">trunk</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dagos.miniconda/trunk/index.html">Ansible role: dagos.miniconda</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dagos.miniconda/trunk/index.html">trunk</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../dagos.tinytex/trunk/index.html">Ansible role: dagos.tinytex</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../dagos.tinytex/trunk/index.html">trunk</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="CONTRIBUTING.html">Contribution Guide</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="CONTRIBUTING.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../dagos.git/trunk/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/DAG-OS/contribution-guide/edit/trunk/modules/ROOT/pages/CONTRIBUTING.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Contribution guide</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>First of all, thanks for taking the time and interest to contribute 🎉🎉🎉</p>
+</div>
+<div class="paragraph">
+<p>Suggestions 💬 and pull requests 🔀 are always welcome!</p>
+</div>
+<div class="paragraph">
+<p>The following is a set of guidelines for contributing to this project.
+These are mostly guidelines, not rules.</p>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle" class="title"></div>
+<ul class="sectlevel1">
+<li><a href="#_dependencies">Dependencies</a></li>
+<li><a href="#_testing">Testing</a></li>
+<li><a href="#_styleguides">Styleguides</a>
+<ul class="sectlevel2">
+<li><a href="#_git_commit_messages">Git commit messages</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following set of dependencies is required for successfully developing the Ansible roles.
+Install them via your favorite Python package manager.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.ansible.com/ansible/latest/index.html">Ansible</a></p>
+</li>
+<li>
+<p><a href="https://molecule.readthedocs.io/en/latest/">Molecule</a></p>
+</li>
+<li>
+<p><a href="https://pre-commit.com/">pre-commit</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing"><a class="anchor" href="#_testing"></a>Testing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With Molecule installed it is simple to test changes locally.
+In the root of a role run <code>mol test</code> for a full test run.</p>
+</div>
+<div class="paragraph">
+<p>During the implementation of a feature or fix a more iterative workflow makes sense:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Run <code>mol converge</code> to provision a container via the <code>molecule/default/converge.yml</code> playbook.</p>
+</li>
+<li>
+<p>Run <code>mol login</code> to log into the container.</p>
+</li>
+<li>
+<p>Run <code>mol verify</code> to execute the checks in <code>molecule/default/verify.yml</code>.</p>
+</li>
+<li>
+<p>Run <code>mol destroy</code> to clean up when you are done.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Most development is done under Windows with WSL2</div>
+<div class="paragraph">
+<p>Since WSL2 has no systemd capabilities there is different Molecule configuration for local development (<code>molecule.yml</code>) and the CI pipeline (<code>molecule-ci.yml</code>):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A non-systemd container is used for local development.</p>
+</li>
+<li>
+<p><a href="https://podman.io/">Podman</a> is used instead of Docker.
+Either install the Molecule driver (<code>molecule-podman</code>) or use Docker locally.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_styleguides"><a class="anchor" href="#_styleguides"></a>Styleguides</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_git_commit_messages"><a class="anchor" href="#_git_commit_messages"></a>Git commit messages</h3>
+<div class="paragraph">
+<p>The following style guide reflects personal preferences as well as best practices as described in the <a href="https://git-scm.com/book/ch5-2.html">Pro Git book</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Limit the first line to 50 characters or less.</p>
+</li>
+<li>
+<p>Start the first line with an applicable emoji from <a href="https://gitmoji.dev/" class="bare">https://gitmoji.dev/</a>.</p>
+</li>
+<li>
+<p>Use the present tense.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-diff hljs" data-lang="diff">-✨ Added feature xyz
++✨ Add feature xyz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Use the imperative mood.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-diff hljs" data-lang="diff">-✨ Adds feature xyz
++✨ Add feature xyz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Do <strong>not</strong> end the commit title with a period.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-diff hljs" data-lang="diff">-✨ Add feature xyz.
++✨ Add feature xyz</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Leave a blank line between title and body.</p>
+</li>
+<li>
+<p>Limit remaining lines to 72 characters or less.</p>
+</li>
+<li>
+<p>You may use the message body to provide additional information</p>
+<div class="listingblock">
+<div class="title">Full example adapted from <a href="https://git-scm.com/book/ch5-2.html" class="bare">https://git-scm.com/book/ch5-2.html</a></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">📝 Capitalized, short (50 chars or less) summary
+
+More detailed explanatory text, if necessary. The blank line separating
+the summary from the body is critical (unless you omit the body
+entirely); tools like rebase will confuse you if you run the two
+together.
+
+Further paragraphs come after blank lines.
+
+* Bullet points are okay, too
+* Typically a hyphen or asterisk is used for the bullet, followed by a
+  single space
+* Use a hanging indent</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You may reference issues and pull requests liberally in the message body.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
