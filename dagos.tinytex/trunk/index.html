@@ -215,16 +215,6 @@ packages: []</code></pre>
 <pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">---
 - name: Converge
   hosts: all
-  pre_tasks:
-    - name: Update apt cache.
-      apt: update_cache=true cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-    - name: Install dependencies
-      ansible.builtin.package:
-        name:
-          - wget
-          - perl
-        state: present
   roles:
     - role: dagos.tinytex
       vars:
